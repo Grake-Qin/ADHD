@@ -6,12 +6,12 @@ import shap
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
-scaler_path = "scaler.pkl"
-scaler = joblib.load(scaler_path)
 
 model_path = "best_random_forest_model.pkl"
 best_svm_model = joblib.load(model_path)
 
+scaler_path = "scaler.pkl"
+scaler = joblib.load(scaler_path)
 
 explainer_path = "explainer.pkl"
 with open(explainer_path, 'rb') as f:
