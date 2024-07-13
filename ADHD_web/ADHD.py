@@ -6,8 +6,7 @@ import shap
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
-# 加载模型、标准化器和SHAP解释器
-model_path = "best_random_forest_model.pkl"
+
 # 检查文件是否存在
 if os.path.exists(model_path):
     st.write(f"Model file exists at: {model_path}")
@@ -20,7 +19,9 @@ if os.path.exists(model_path):
         st.write(f"Error loading model: {e}")
 else:
     st.write("Model file does not exist.")
-    
+
+# 加载模型、标准化器和SHAP解释器
+model_path = "best_random_forest_model.pkl"
 best_svm_model = joblib.load(model_path)
 
 scaler_path = "scaler.pkl"
