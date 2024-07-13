@@ -7,17 +7,17 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
 # 加载模型、标准化器和SHAP解释器
-model_path = "C:\\Users\\qinha\\Desktop\\best_random_forest_model.pkl"
+model_path = "best_random_forest_model.pkl"
 best_svm_model = joblib.load(model_path)
 
-scaler_path = "C:\\Users\\qinha\\Desktop\\scaler.pkl"
+scaler_path = "scaler.pkl"
 scaler = joblib.load(scaler_path)
 
-explainer_path = "C:\\Users\\qinha\\Desktop\\explainer.pkl"
+explainer_path = "explainer.pkl"
 with open(explainer_path, 'rb') as f:
     explainer = pickle.load(f)
 
-shap_values_path = "C:\\Users\\qinha\\Desktop\\shap_values.pkl"
+shap_values_path = "shap_values.pkl"
 with open(shap_values_path, 'rb') as f:
     shap_values = pickle.load(f)
 # 定义特征名称
