@@ -6,6 +6,12 @@ import shap
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
+scaler_path = "scaler.pkl"
+scaler = joblib.load(scaler_path)
+
+model_path = "best_random_forest_model.pkl"
+best_svm_model = joblib.load(model_path)
+
 
 explainer_path = "explainer.pkl"
 with open(explainer_path, 'rb') as f:
@@ -14,12 +20,6 @@ with open(explainer_path, 'rb') as f:
 shap_values_path = "shap_values.pkl"
 with open(shap_values_path, 'rb') as f:
     shap_values = pickle.load(f)
-
-scaler_path = "scaler.pkl"
-scaler = joblib.load(scaler_path)
-
-model_path = "best_random_forest_model.pkl"
-best_svm_model = joblib.load(model_path)
 
 
 # 定义特征名称
