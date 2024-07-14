@@ -7,17 +7,17 @@ import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler
 
 
-model_path = "best_random_forest_model.pkl"
+model_path = "ADHD_web/best_random_forest_model.pkl"
 best_svm_model = joblib.load(model_path)
 
-scaler_path = "scaler.pkl"
+scaler_path = "ADHD_web/scaler.pkl"
 scaler = joblib.load(scaler_path)
 
-explainer_path = "explainer.pkl"
+explainer_path = "ADHD_web/explainer.pkl"
 with open(explainer_path, 'rb') as f:
     explainer = pickle.load(f)
 
-shap_values_path = "shap_values.pkl"
+shap_values_path = "ADHD_web/shap_values.pkl"
 with open(shap_values_path, 'rb') as f:
     shap_values = pickle.load(f)
 
